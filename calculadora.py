@@ -18,6 +18,11 @@ class CalculadoraApp:
     def run(self):
         self.mainwindow.mainloop()
 
+    def adicao(self):
+        print("fef")
+
+    def subtracao(self):
+        print("sgnsngrgrs")
 
 if __name__ == '__main__':
     app = CalculadoraApp()

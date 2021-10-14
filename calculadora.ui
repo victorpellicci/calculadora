@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <interface version="1.1">
-  <object class="ttk.Frame" id="frame2">
+  <object class="ttk.Frame" id="mainwindow">
     <property name="height">200</property>
     <property name="width">200</property>
     <layout manager="pack">
@@ -35,7 +35,8 @@
     </child>
     <child>
       <object class="ttk.Button" id="button1">
-        <property name="command" type="command" cbtype="simple">Adicao</property>
+        <property name="command" type="command" cbtype="simple">adicao</property>
+        <property name="default">normal</property>
         <property name="text" translatable="yes">Adição</property>
         <layout manager="grid">
           <property name="column">0</property>
