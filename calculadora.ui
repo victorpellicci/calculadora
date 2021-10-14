@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.1">
+  <object class="ttk.Frame" id="frame2">
+    <property name="height">200</property>
+    <property name="width">200</property>
+    <layout manager="pack">
+      <property name="propagate">True</property>
+      <property name="side">top</property>
+    </layout>
+    <child>
+      <object class="ttk.Entry" id="entry1">
+        <property name="text" translatable="yes">Digite o 1º numero</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">15</property>
+          <property name="pady">15</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+          <property type="col" id="0" name="pad">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry2">
+        <property name="text" translatable="yes">Digite o 2º numero</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">15</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+          <property type="col" id="0" name="pad">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button1">
+        <property name="command" type="command" cbtype="simple">Adicao</property>
+        <property name="text" translatable="yes">Adição</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="ipadx">4</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">w</property>
+          <property type="col" id="0" name="pad">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button2">
+        <property name="command" type="command" cbtype="simple">subtracao</property>
+        <property name="text" translatable="yes">Subtração</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">e</property>
+          <property type="col" id="0" name="pad">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button3">
+        <property name="command" type="command" cbtype="simple">multiplicacao</property>
+        <property name="text" translatable="yes">Multiplicação</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+          <property name="sticky">w</property>
+          <property type="col" id="0" name="pad">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button4">
+        <property name="command" type="command" cbtype="simple">divisao</property>
+        <property name="text" translatable="yes">Divisão</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+          <property name="sticky">e</property>
+          <property type="col" id="0" name="pad">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button5">
+        <property name="command" type="command" cbtype="simple">potenciacao</property>
+        <property name="text" translatable="yes">Potenciação</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="ipadx">4</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">6</property>
+          <property name="sticky">w</property>
+          <property type="col" id="0" name="pad">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button6">
+        <property name="command" type="command" cbtype="simple">radiciacao</property>
+        <property name="text" translatable="yes">Radiciação</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">6</property>
+          <property name="sticky">e</property>
+          <property type="col" id="0" name="pad">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Entry" id="entry3">
+        <property name="text" translatable="yes">Resultado</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">15</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">8</property>
+          <property type="col" id="0" name="pad">0</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
