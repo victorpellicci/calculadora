@@ -8,16 +8,16 @@ class CalculadoraApp(object):
     def __init__(self, **kw):
         #insira toda a inicialização aqui
         self.root = tk.Tk()
-        self.root.title("Calculadora exemplo")
+        
                             
         #1: Crie um buider
         self.builder = builder = pygubu.Builder()
-         
         #2: leia o arquivo  ui .
         builder.add_from_file('calculadora.ui')       
          
         #3: Create a janela principal
         self.mainwindow = builder.get_object('mainwindow', self.root)
+        self.mainwindow.title("Calculadora exemplo")
  
  
     def execute(self):

@@ -126,13 +126,12 @@
     </child>
     <child>
       <object class="ttk.Entry" id="entry3">
-        <property name="text" translatable="yes">Resultado</property>
         <layout manager="grid">
           <property name="column">0</property>
           <property name="padx">15</property>
           <property name="pady">5</property>
           <property name="propagate">True</property>
-          <property name="row">8</property>
+          <property name="row">10</property>
           <property type="col" id="0" name="pad">0</property>
         </layout>
       </object>
@@ -168,7 +167,31 @@
           <property name="column">0</property>
           <property name="pady">5</property>
           <property name="propagate">True</property>
+          <property name="row">9</property>
+          <property type="col" id="0" name="pad">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label4">
+        <property name="text" translatable="yes">1º numero: Radicando</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="propagate">True</property>
           <property name="row">7</property>
+          <property name="sticky">ne</property>
+          <property type="col" id="0" name="pad">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="label5">
+        <property name="text" translatable="yes">2º numero: Indice</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">8</property>
+          <property name="sticky">ne</property>
           <property type="col" id="0" name="pad">0</property>
         </layout>
       </object>
