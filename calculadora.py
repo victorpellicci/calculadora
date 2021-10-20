@@ -9,7 +9,6 @@ builder = pygubu.Builder()
 #2: Load an ui file
 builder.add_from_file('calculadora.ui')
 
-
 class CalculadoraApp:
 
     def __init__(self):
@@ -19,7 +18,8 @@ class CalculadoraApp:
         self.entry1 = builder.get_object('entry1')
         self.entry2 = builder.get_object('entry2')
         self.entry3 = builder.get_object('entry3')
-
+        self.label4 = builder.get_object('label4')
+        self.label5 = builder.get_object('label5')
 
     def run(self):
         self.mainwindow.mainloop()
@@ -42,15 +42,16 @@ class CalculadoraApp:
         self.entry3.delete(0, 'end')
         self.entry3.insert(0,float(caixa1)*float(caixa2))
 
+    def texto_erro(): 
+        if (caixa2==0):
+            print('Erro! Divisão por zero!')
+        else:   
+            print(float(caixa1)/float(caixa2))
+            
     def divisao(self):
         caixa1 = self.entry1.get()
         caixa2 = self.entry2.get()
         self.entry3.delete(0, 'end')
-        def texto_erro(): 
-            if (caixa2==0):
-                print('Erro! Divisão por zero!')
-            else:   
-                print(float(caixa1)/float(caixa2))
         self.entry3.insert(0,texto_erro)
 
     def potenciacao(self):
@@ -64,6 +65,8 @@ class CalculadoraApp:
         caixa2 = self.entry2.get()
         self.entry3.delete(0, 'end')
         self.entry3.insert(0,float(caixa1)**(1/float(caixa2)))
+        self.label4.config(text='1º numero: Radicando')
+        self.label5.config(text='2º numero: Indice')
 
 if __name__ == '__main__':
 
