@@ -46,7 +46,12 @@ class CalculadoraApp:
         caixa1 = self.entry1.get()
         caixa2 = self.entry2.get()
         self.entry3.delete(0, 'end')
-        self.entry3.insert(0,float(caixa1)/float(caixa2))
+        def texto_erro(): 
+            if (caixa2==0):
+                print('Erro! Divisão por zero!')
+            else:   
+                print(float(caixa1)/float(caixa2))
+        self.entry3.insert(0,texto_erro)
 
     def potenciacao(self):
         caixa1 = self.entry1.get()
