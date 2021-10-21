@@ -21,11 +21,7 @@ class CalculadoraApp:
         self.label4 = builder.get_object('label4')
         self.label5 = builder.get_object('label5')
         self.checkbutton1 = builder.get_object('checkbutton1')
-        print(self.checkbutton1.state())
-        self.dado = "asdfg"
-        data = '123455'
-        print(data)
-
+        
     def run(self):
         self.mainwindow.mainloop()
 
@@ -38,11 +34,11 @@ class CalculadoraApp:
             return('Use "." no lugar de ","')
 
     def adicao(self):
-        if (self.checkbutton1.state()[0]=='alternate' or self.checkbutton1.state()[0]==''):
-            self.entry1.delete(0, 'end')
-            self.entry2.delete(0, 'end')
         self.entry3.delete(0, 'end')
         self.entry3.insert(0,self.adicaoerro())
+        if (self.checkbutton1.state()[0]=='selected'):
+            self.entry1.delete(0, 'end')
+            self.entry2.delete(0, 'end')
 
     def subtracaoerro (self):
         caixa1 = self.entry1.get()
@@ -55,6 +51,9 @@ class CalculadoraApp:
     def subtracao(self):
         self.entry3.delete(0, 'end')
         self.entry3.insert(0,self.subtracaoerro())
+        if (self.checkbutton1.state()[0]=='selected'):
+            self.entry1.delete(0, 'end')
+            self.entry2.delete(0, 'end')
 
     def multiplicacaoerro (self):
         caixa1 = self.entry1.get()
@@ -67,6 +66,9 @@ class CalculadoraApp:
     def multiplicacao(self):
         self.entry3.delete(0, 'end')
         self.entry3.insert(0,self.multiplicacaoerro())
+        if (self.checkbutton1.state()[0]=='selected'):
+            self.entry1.delete(0, 'end')
+            self.entry2.delete(0, 'end')
 
     def divisaoerro(self): 
         caixa1 = self.entry1.get()
@@ -81,6 +83,9 @@ class CalculadoraApp:
     def divisao(self):
         self.entry3.delete(0, 'end')
         self.entry3.insert(0,self.divisaoerro())
+        if (self.checkbutton1.state()[0]=='selected'):
+            self.entry1.delete(0, 'end')
+            self.entry2.delete(0, 'end')
 
     def potenciacaoerro(self):
         caixa1 = self.entry1.get()
@@ -93,6 +98,9 @@ class CalculadoraApp:
     def potenciacao(self):
         self.entry3.delete(0, 'end')
         self.entry3.insert(0,self.potenciacaoerro())
+        if (self.checkbutton1.state()[0]=='selected'):
+            self.entry1.delete(0, 'end')
+            self.entry2.delete(0, 'end')
 
     def radiciacaoerro(self):
         caixa1 = self.entry1.get()
@@ -107,14 +115,13 @@ class CalculadoraApp:
         self.entry3.insert(0,self.radiciacaoerro())
         self.label4.config(text='1º numero: Radicando')
         self.label5.config(text='2º numero: Indice')
-
-    def manter(self):
-        print(self.checkbutton1.state())
-
+        if (self.checkbutton1.state()[0]=='selected'):
+            self.entry1.delete(0, 'end')
+            self.entry2.delete(0, 'end')
+    
 if __name__ == '__main__':
 
     app = CalculadoraApp()
-    print(app.dado)
-
+    
     builder.connect_callbacks(CalculadoraApp())
     app.run()
