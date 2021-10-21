@@ -20,6 +20,9 @@ class CalculadoraApp:
         self.entry3 = builder.get_object('entry3')
         self.label4 = builder.get_object('label4')
         self.label5 = builder.get_object('label5')
+        self.dado = "asdfg"
+        data = '123455'
+        print(data)
 
     def run(self):
         self.mainwindow.mainloop()
@@ -42,17 +45,19 @@ class CalculadoraApp:
         self.entry3.delete(0, 'end')
         self.entry3.insert(0,float(caixa1)*float(caixa2))
 
-    def texto_erro(): 
-        if (caixa2==0):
-            print('Erro! Divisão por zero!')
-        else:   
-            print(float(caixa1)/float(caixa2))
-            
-    def divisao(self):
+    def texto_erro(self): 
         caixa1 = self.entry1.get()
         caixa2 = self.entry2.get()
+        if (caixa2==0):
+            return('Erro! Divisão por zero!')
+        else:   
+            return(float(caixa1)/float(caixa2))
+            
+    def divisao(self):
+        resultado = self.texto_erro()
+
         self.entry3.delete(0, 'end')
-        self.entry3.insert(0,texto_erro)
+        self.entry3.insert(0, resultado)
 
     def potenciacao(self):
         caixa1 = self.entry1.get()
@@ -73,5 +78,8 @@ if __name__ == '__main__':
 
 
     app = CalculadoraApp()
+    print(app.dado)
+    #print(app.data)
+
     builder.connect_callbacks(CalculadoraApp())
     app.run()
