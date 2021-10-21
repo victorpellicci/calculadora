@@ -111,7 +111,7 @@
     </child>
     <child>
       <object class="ttk.Button" id="button6">
-        <property name="command" type="command" cbtype="simple">radiciacao</property>
+        <property name="command" type="command" cbtype="simple">manter</property>
         <property name="text" translatable="yes">Radiciação</property>
         <layout manager="grid">
           <property name="column">0</property>
@@ -190,6 +190,21 @@
           <property name="propagate">True</property>
           <property name="row">8</property>
           <property name="sticky">ne</property>
+          <property type="col" id="0" name="pad">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Checkbutton" id="checkbutton1">
+        <property name="text" translatable="yes">Manter
+numeros</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">5</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">7</property>
+          <property name="sticky">w</property>
           <property type="col" id="0" name="pad">0</property>
         </layout>
       </object>
