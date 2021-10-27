@@ -11,4 +11,4 @@ setup(name='Calculadora do Victor',
 	version='1.0',
 	description='Calculadora rapida para o dia a dia',
 	options={'build_exe':bild_options}, 
-	executables=[Executable('main.py', base=platform)])
+	executables=[executable('calculadora.py', base=base)])
