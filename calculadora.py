@@ -1,6 +1,8 @@
 import tkinter as tk
+from tkinter import Tk, Label, Frame, Button
 import sys
 import pygubu
+import time
 
 
 #1: Create a builder
@@ -23,7 +25,8 @@ class CalculadoraApp:
         self.label4 = builder.get_object('label4')
         self.label5 = builder.get_object('label5')
         self.checkbutton1 = builder.get_object('checkbutton1')
-        
+        self.button7 = builder.get_object('button7')
+
     def run(self):
         self.mainwindow.mainloop()
 
@@ -38,7 +41,7 @@ class CalculadoraApp:
     def adicao(self):
         self.entry3.delete(0, 'end')
         self.entry3.insert(0,self.adicaoerro())
-        if (self.checkbutton1.state()[0]=='selected'):
+        if ('selected' in self.checkbutton1.state()):
             self.entry1.delete(0, 'end')
             self.entry2.delete(0, 'end')
 
@@ -53,7 +56,7 @@ class CalculadoraApp:
     def subtracao(self):
         self.entry3.delete(0, 'end')
         self.entry3.insert(0,self.subtracaoerro())
-        if (self.checkbutton1.state()[0]=='selected'):
+        if ('selected' in self.checkbutton1.state()):
             self.entry1.delete(0, 'end')
             self.entry2.delete(0, 'end')
 
@@ -68,7 +71,7 @@ class CalculadoraApp:
     def multiplicacao(self):
         self.entry3.delete(0, 'end')
         self.entry3.insert(0,self.multiplicacaoerro())
-        if (self.checkbutton1.state()[0]=='selected'):
+        if ('selected' in self.checkbutton1.state()):
             self.entry1.delete(0, 'end')
             self.entry2.delete(0, 'end')
 
@@ -85,7 +88,7 @@ class CalculadoraApp:
     def divisao(self):
         self.entry3.delete(0, 'end')
         self.entry3.insert(0,self.divisaoerro())
-        if (self.checkbutton1.state()[0]=='selected'):
+        if ('selected' in self.checkbutton1.state()):
             self.entry1.delete(0, 'end')
             self.entry2.delete(0, 'end')
 
@@ -100,7 +103,7 @@ class CalculadoraApp:
     def potenciacao(self):
         self.entry3.delete(0, 'end')
         self.entry3.insert(0,self.potenciacaoerro())
-        if (self.checkbutton1.state()[0]=='selected'):
+        if ('selected' in self.checkbutton1.state()):
             self.entry1.delete(0, 'end')
             self.entry2.delete(0, 'end')
 
@@ -117,9 +120,20 @@ class CalculadoraApp:
         self.entry3.insert(0,self.radiciacaoerro())
         self.label4.config(text='1º numero: Radicando')
         self.label5.config(text='2º numero: Indice')
-        if (self.checkbutton1.state()[0]=='selected'):
+        if ('selected' in self.checkbutton1.state()):
             self.entry1.delete(0, 'end')
             self.entry2.delete(0, 'end')
+
+    def fechar(self):
+        """
+        print(self.button7.keys())
+        self.button7['text']='Obrigado por usar a calculadora do Victor!'
+        
+        """
+        self.label4.config(text='Obrigado por usar a calculadora do Victor!')
+        time.sleep(3)
+
+        #self.mainwindow.master.destroy()
     
 if __name__ == '__main__':
 

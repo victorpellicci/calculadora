@@ -44,7 +44,7 @@
         <property name="text" translatable="yes">Adição</property>
         <layout manager="grid">
           <property name="column">0</property>
-          <property name="ipadx">8</property>
+          <property name="ipadx">4</property>
           <property name="padx">15</property>
           <property name="pady">5</property>
           <property name="propagate">True</property>
@@ -236,6 +236,23 @@ numeros</property>
           <property name="propagate">True</property>
           <property name="row">7</property>
           <property name="sticky">w</property>
+          <property type="col" id="0" name="minsize">0</property>
+          <property type="col" id="0" name="pad">0</property>
+          <property type="col" id="0" name="weight">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Button" id="button7">
+        <property name="command" type="command" cbtype="simple">fechar</property>
+        <property name="cursor">pirate</property>
+        <property name="text" translatable="yes">Fechar</property>
+        <layout manager="grid">
+          <property name="column">0</property>
+          <property name="padx">15</property>
+          <property name="pady">5</property>
+          <property name="propagate">True</property>
+          <property name="row">11</property>
           <property type="col" id="0" name="minsize">0</property>
           <property type="col" id="0" name="pad">0</property>
           <property type="col" id="0" name="weight">0</property>
