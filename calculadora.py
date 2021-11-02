@@ -25,8 +25,7 @@ class CalculadoraApp:
         self.label4 = builder.get_object('label4')
         self.label5 = builder.get_object('label5')
         self.checkbutton1 = builder.get_object('checkbutton1')
-        self.button7 = builder.get_object('button7')
-
+       
     def run(self):
         self.mainwindow.mainloop()
 
@@ -125,15 +124,14 @@ class CalculadoraApp:
             self.entry2.delete(0, 'end')
 
     def fechar(self):
-        """
-        print(self.button7.keys())
-        self.button7['text']='Obrigado por usar a calculadora do Victor!'
-        
-        """
-        self.label4.config(text='Obrigado por usar a calculadora do Victor!')
-        time.sleep(3)
-
-        #self.mainwindow.master.destroy()
+        self.mainwindow.destroy()
+        titulo = Label(
+        text="Obrigado por usar a calculadora do Victor!", 
+        font=("Arial", 16),
+        pady=185
+        )
+        titulo.pack()
+        self.mainwindow.master.after(3000, self.mainwindow.master.destroy)
     
 if __name__ == '__main__':
 
